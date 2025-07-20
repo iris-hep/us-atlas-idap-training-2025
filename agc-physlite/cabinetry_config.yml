@@ -1,0 +1,65 @@
+General:
+    Measurement: "PHYSLITE_ATLAS_t_tbar"
+    POI: "ttbar_norm"
+    HistogramFolder: "histograms/"
+    InputPath: "histograms.root:{RegionPath}/{SamplePath}/{VariationPath}"
+    VariationPath: "nominal"
+    
+Regions: 
+  - Name: "trijet_mass"
+    RegionPath: "hist_reco_mtop"
+    Variable: "$m_{bjj}$ [GeV]"
+    Binning: [ 50, 70, 90, 110, 130, 150, 170, 190, 210, 230, 250, 270, 290, 310, 330, 350, 370, 390, 410, 430, 450, 470, 490, 510, 530, 550 ]
+  - Name: "Ht"
+    RegionPath: "hist_Ht"
+    Variable: "$H_T$ [GeV/c]"
+    Binning: [ 70, 90, 110, 130, 150, 170, 190, 210, 230, 250, 270, 290, 310, 330, 350, 370, 390, 410, 430, 450, 470, 490, 510, 530, 550, 570 ]    
+
+    
+Samples:
+  - Name: "Pseudodata"
+    SamplePath: "pseudodata"
+    Data: True      
+    
+  - Name: "1) single top s chan."
+    SamplePath: "single top s chan."   
+    
+  - Name: "2) single top t chan."
+    SamplePath: "single top t chan."
+    
+  - Name: "3) single top tW chan."
+    SamplePath: "single top tW chan."       
+    
+  - Name: "4) $t \\bar{t}$"
+    SamplePath: "$t \\bar{t}$"        
+    
+  - Name: "5) W and jets"
+    SamplePath: "W and jets"    
+    
+Systematics:
+  - Name: "Luminosity"
+    Up:
+      Normalization: 0.01
+    Down:
+      Normalization: -0.01
+    Type: "Normalization"    
+    
+  - Name: "Theory t-tbar"
+    Up:
+      VariationPath: "systematic_var"
+    Down:
+      Symmetrize: True
+    Samples: "4) $t \\bar{t}$"
+    Type: "NormPlusShape"    
+    
+    
+NormFactors:
+  - Name: "ttbar_norm"
+    Samples: "4) $t \\bar{t}$"
+    Nominal: 1.0
+    Bounds: [0, 10]
+    
+  - Name: "W&jets_norm"
+    Samples: "5) W and jets"
+    Nominal: 1.0
+    Bounds: [0, 10]    
