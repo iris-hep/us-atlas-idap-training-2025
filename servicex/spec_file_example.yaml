@@ -1,0 +1,12 @@
+Sample:
+  - Name: CLI-Testing
+    Dataset: !Rucio user.mtost:user.mtost.all.Mar11
+    NFiles: 1
+    Query: !UprootRaw |
+      [{"treename": "reco",
+        "cut": "any(log(jet_GN2v01_pc / ((jet_GN2v01_pb * 0.3) + (jet_GN2v01_pu * (1 - 0.3)))) > 0.828, axis=1)", 
+        "filter_name": ["mu_phi", "mu_eta", "mu_charge", "mu_e*", "mu_pt*"]
+        },
+        {"copy_histograms": ["CutBookkeeper*", "cflow*", "metadata", "listOfSystematics"]}
+        ]
+      
