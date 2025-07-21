@@ -14,7 +14,18 @@ This code here heavily relies on [IRIS-HEP AGC demonstration in Binder](https://
 
 ## How to run?
 
+### Online environment on Coffea-Casa
+
 The code was tested on the [coffea-opendata.casa](https://coffea-opendata.casa/) cluster with the coffea 2025 server option, it contains all necessary packages already installed. For code usage open the `main_code.ipynb` Jupyter notebook file and start running cells.
+
+### Local environment with Pixi
+
+If you would like to run parts of the module notebooks locally in a standalone environment, you can use the provided [Pixi](https://pixi.sh/) environment.
+
+To do so:
+* [Install Pixi](https://pixi.sh/latest/#installation)
+* Run `pixi run start`
+
 
 ## Abstract
 
