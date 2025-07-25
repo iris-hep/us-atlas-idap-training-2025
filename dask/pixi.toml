@@ -2,7 +2,7 @@
 authors = ["Iason Krommydas <iason.krom@gmail.com>"]
 channels = ["conda-forge"]
 name = "dask"
-platforms = ["linux-64", "osx-64", "osx-arm64"]
+platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 version = "0.1.0"
 
 [tasks.lab]
@@ -13,7 +13,7 @@ cmd = "dot -c && jupyter lab"
 depends-on = ["lab"]
 
 [dependencies]
-coffea = ">=2025.7.1,<2026"
+coffea = ">=2025.7.2"
 dask = ">=2025.3.0,<2026"
 distributed = ">=2025.3.0,<2026"
 mimesis = ">=18.0.0,<19"
