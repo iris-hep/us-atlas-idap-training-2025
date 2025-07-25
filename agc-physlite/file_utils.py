@@ -15,7 +15,7 @@ df_metadata = pd.read_csv('metadata.csv')
 # using all of them might cause a long time of computation so one could choose to use a few. 
 # The code is adjusted in a scalable way at this point.
 # Specify None to use all available files.
-MAX_NUM_OF_FILES = 1
+MAX_NUM_OF_FILES = 10
 
 def get_urls_from_index_file(indexFilePath):
 
