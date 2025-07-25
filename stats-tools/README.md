@@ -1,6 +1,9 @@
 # Statistics tools: `pyhf` and `cabinetry`
 
-*partially based on previous material: [pyhf Users and Developers Workshop 2023](https://indico.cern.ch/event/1294577/) and [contribution to the Belle II pyhf workshop](https://indico.belle2.org/event/8470/)*
+_based on previous material_:
+   - [pyhf Users and Developers Workshop 2023](https://indico.cern.ch/event/1294577/)
+   - [contributions to the 2023 Belle II pyhf workshop](https://indico.belle2.org/event/8470/)
+   - [2024 US ATLAS / IRIS-HEP Analysis Software Training Event](https://indico.cern.ch/event/1376945/)
 
 Further resources:
 - `pyhf`
